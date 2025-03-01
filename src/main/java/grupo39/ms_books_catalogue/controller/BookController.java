@@ -79,7 +79,15 @@ public class BookController {
     @GetMapping("/search/visibility")
     public List<Book> searchByVisibility(@RequestParam boolean visible) {
         return bookService.searchByVisibility(visible);
+    }}
+
+public class Controller {
+
+    @GetMapping("/")
+    public ResponseEntity<String> get() {
+        return ResponseEntity.ok("Hello from Railway + Spring!");
     }
+}
 
     // Buscar libros por combinación de atributos
     @GetMapping("/search")
